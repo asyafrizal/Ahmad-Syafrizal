@@ -1,0 +1,235 @@
+/* Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e0e0e0, #ffffff);
+    color: #333;
+    padding-bottom: 50px;
+    line-height: 1.6;
+}
+
+/* Header / Navigasi */
+header {
+    background: linear-gradient(to right, #757f9a, #d7dde8);
+    padding: 20px 40px;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 30px;
+    font-style:oblique;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+    font-size: 17px;
+    font-style:oblique;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    color: #1f2235;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #d3cce3, #e9e4f0);
+    color: #333;
+    animation: fadeIn 1.2s ease-in-out;
+    border-radius: 50px;
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#hero .button-container {
+    margin-top: 30px;
+}
+
+#hero .btn {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.4s, transform 0.4s;
+}
+
+#hero .btn:hover {
+    background-color: #ff9800;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Section Umum */
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #333;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Tentang Saya */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.about-content img {
+    width: 200px; /* Ukuran lingkaran */
+    height: 200px;
+    border-radius: 50%; /* Membuat lingkaran */
+    /*object-fit: scale-down; /* Memastikan seluruh gambar terlihat utuh */
+    object-position: center; /* Menempatkan gambar di tengah lingkaran */
+    background-color: #fff; /* Warna latar belakang (jika gambar tidak penuh) */
+    border: 3px solid #ddd; /* Opsional: border cantik */
+}
+
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+/* Pencapaian (Skills) */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+}
+
+.skills-list li {
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    color: #333;
+    padding: 12px 25px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills-list li:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Proyek */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 6px 6px 25px rgba(0,0,0,0.2);
+}
+
+/* Kontak */
+#contact p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#contact {
+    text-align: center;
+}
+
+#contact .btn {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #333;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+
+#contact .btn:hover {
+    background-color: #ff9800;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+
+/* Animasi Fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
